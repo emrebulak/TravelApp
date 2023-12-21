@@ -6,7 +6,8 @@
     --text-black-color: #000000;
     --badge-bg-color: #D3D3D3;
     --booking-bg-color: #ffffffb0;
-    --text-white-outline-color : #00000063;
+    --text-white-outline-color: #00000063;
+    --rooms-bg-color: #F9F9F9;
 }
 
 * {
@@ -137,7 +138,7 @@ body {
 }
 
 
-.text-container{
+.text-container {
     width: 100%;
     background-color: var(--text-white-color);
     font-size: 20px;
@@ -147,8 +148,145 @@ body {
     color: var(--text-white-outline-color);
 }
 
-.text-container span{
+.text-container span {
     font-weight: bold;
     font-size: 25px;
     color: var(--text-black-color);
+}
+
+.rooms-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--rooms-bg-color);
+    padding: 50px 15%;
+}
+
+.room-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.room-header h2 {
+    font-size: 30px;
+}
+
+.rooms {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 50px;
+    padding: 20px 0px;
+}
+
+.room {
+    background-color: var(--text-white-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.room-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: .3s all ease;
+}
+
+.room-image:hover {
+    transform: scale(1.2);
+}
+
+.room .btn {
+    margin-bottom: 5px;
+}
+
+.room h3{
+    font-size: 24px;
+}
+
+.room h4{
+    font-size: 19px;
+}
+
+.subscribe-container{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--text-white-color);
+    padding: 50px 15%;
+    
+}
+
+.subscribe-container .description{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.description-logo {
+    background-color: var(--text-bg-color);
+    color: var(--text-white-color);
+    padding: 12px 40px;
+}
+
+.description p{
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+.subscribe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 35%;
+}
+
+.subscribe-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--text-black-color);
+    width: 100%;
+}
+
+.subscribe-buttons input{
+    width: 100%;
+  height: 52px;
+  text-indent: 5px;
+  font-size: 16px;
+}
+
+.food-detail-container{
+    width: 100%;
+    padding: 50px 15%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 80vh;
+    background: url(../img/restaurant.jpg);
+    background-repeat: no-repeat;
+}
+
+.food-detail{
+    width: 65%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.food-detail h1{
+    font-size: 45px;
 }
