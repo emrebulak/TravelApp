@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
 
 :root {
     --text-bg-color: #04364A;
@@ -21,7 +22,6 @@
 }
 
 body {
-    height: 500vh;
     overflow-x: hidden;
 }
 
@@ -42,6 +42,13 @@ body {
     align-items: center;
     margin-top: 50px;
     padding: 0 50px;
+}
+
+.bar {
+    display: none;
+    font-size: 35px;
+    margin-right: 25px;
+    cursor: pointer;
 }
 
 .logo-container {
@@ -206,23 +213,23 @@ body {
     margin-bottom: 5px;
 }
 
-.room h3{
+.room h3 {
     font-size: 24px;
 }
 
-.room h4{
+.room h4 {
     font-size: 19px;
 }
 
-.subscribe-container{
+.subscribe-container {
     display: flex;
     justify-content: space-between;
     background-color: var(--text-white-color);
     padding: 50px 15%;
-    
+
 }
 
-.subscribe-container .description{
+.subscribe-container .description {
     width: 30%;
     display: flex;
     flex-direction: column;
@@ -237,12 +244,12 @@ body {
     padding: 12px 40px;
 }
 
-.description p{
+.description p {
     font-size: 16px;
     line-height: 1.3;
 }
 
-.subscribe{
+.subscribe {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -251,22 +258,23 @@ body {
     width: 35%;
 }
 
-.subscribe-buttons{
+.subscribe-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid var(--text-black-color);
     width: 100%;
+    min-width: 350px;
 }
 
-.subscribe-buttons input{
+.subscribe-buttons input {
     width: 100%;
-  height: 52px;
-  text-indent: 5px;
-  font-size: 16px;
+    height: 52px;
+    text-indent: 5px;
+    font-size: 16px;
 }
 
-.food-detail-container{
+.food-detail-container {
     width: 100%;
     padding: 50px 15%;
     display: flex;
@@ -277,7 +285,7 @@ body {
     background-repeat: no-repeat;
 }
 
-.food-detail{
+.food-detail {
     width: 65%;
     padding: 50px;
     display: flex;
@@ -287,6 +295,409 @@ body {
     gap: 20px;
 }
 
-.food-detail h1{
+.food-detail h1 {
     font-size: 45px;
+}
+
+.premium-container {
+    width: 100%;
+    padding: 50px 15%;
+    background-color: var(--rooms-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.premium-header {
+    text-align: center;
+}
+
+.premium-header h2 {
+    font-size: 30px;
+}
+
+.premium-body {
+    display: flex;
+    gap: 40px;
+}
+
+.premium-image {
+    width: 30%;
+    overflow: hidden;
+}
+
+
+.premium-image img {
+    width: 100%;
+}
+
+.premium-cards {
+    width: 65%;
+    min-height: 1000px;
+}
+
+.premium-card {
+    background-color: var(--text-white-color);
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+}
+
+.premium-card h1 {
+    font-size: 30px;
+}
+
+.gallery {
+    width: 100%;
+    background-color: var(--text-black-color);
+    padding: 50px 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 30%;
+    opacity: .5;
+    cursor: pointer;
+    transition: .3s all;
+}
+
+.gallery img:hover {
+    opacity: 1;
+}
+
+
+
+@media screen and (max-width:1070px) {
+
+    .navbar {
+        margin-top: 20px;
+        padding: 0 20px;
+    }
+
+    .links {
+        gap: 60px;
+        padding-right: 30px;
+    }
+
+    .links a {
+        font-size: 16px;
+    }
+
+    .banner-header h1 {
+        font-size: 65px;
+        margin-bottom: 45px;
+    }
+
+    .room-header {
+        margin-bottom: 20px;
+    }
+    
+    .room-header h2 {
+        font-size: 25px;
+    }
+    
+    .rooms {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .room h3 {
+        font-size: 22px;
+    }
+    
+    .room h4 {
+        font-size: 17px;
+    }
+    
+    .food-detail {
+        width: 85%;
+        padding: 30px;
+    }
+    
+    .food-detail h1 {
+        font-size: 35px;
+    }
+
+    .premium-container {
+        width: 100%;
+        padding: 30px 5%;
+        gap: 30px;
+    }
+    
+    
+    .premium-header h2 {
+        font-size: 25px;
+    }
+    
+    .premium-body {
+        gap: 30px;
+    }
+    
+    .premium-image {
+        width: 30%;
+    }
+    
+    .premium-card {
+        margin-bottom: 23px;
+        gap: 15px;
+    }
+    
+    .premium-card h1 {
+        font-size: 25px;
+    }
+
+}
+
+
+@media screen and (max-width:956px) {
+    .header {
+        gap: 180px;
+    }
+
+    .navbar {
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+
+    .links {
+        gap: 30px;
+        padding-right: 15px;
+    }
+
+    .links a {
+        font-size: 15px;
+    }
+
+    .banner-header h1 {
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
+
+    .subscribe, .subscribe-container .description {
+        width: 100%;
+    }
+
+    .subscribe-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .premium-container {
+        padding: 20px 5%;
+        gap: 20px;
+    }
+    
+    .premium-body {
+        gap: 20px;
+    }
+    
+    .premium-image {
+        width: 40%;
+    }
+    
+    
+    .premium-card {
+        margin-bottom: 15px;
+        gap: 15px;
+    }
+    
+    .premium-card h1 {
+        font-size: 25px;
+    }
+
+}
+
+@media screen and (max-width:790px) {
+    .header {
+        gap: 50px;
+    }
+
+    .links {
+        gap: 20px;
+        padding-right: 10px;
+    }
+
+    .links a {
+        font-size: 15px;
+    }
+
+    .badge p {
+        font-size: 16px;
+    }
+
+
+    .banner-header h1 {
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+
+    .booking {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .booking-card-item {
+        width: 100%;
+    }
+
+
+    .booking-card-item label {
+        font-size: 16px;
+    }
+
+    .booking-card-item input {
+        height: 30px;
+    }
+
+    .text-container {
+        font-size: 18px;
+        word-spacing: 8px;
+    }
+    
+    .text-container span {
+        font-size: 22px;
+    }
+
+    .room-header {
+        margin-bottom: 10px;
+    }
+    
+    .room-header h2 {
+        font-size: 20px;
+    }
+    
+    .rooms {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    
+    .room h3 {
+        font-size: 20px;
+    }
+    
+    .room h4 {
+        font-size: 16px;
+    }
+
+    .rooms-container{
+        padding: 30px 8%;
+    }
+
+    
+    .premium-body {
+        flex-direction: column;
+    }
+    
+    .premium-image {
+        display: none;
+    }
+
+    .premium-cards {
+        width: 100%;
+    }
+
+    .gallery {
+        padding: 30px 5%;
+    }
+    
+    .gallery img {
+        width: 40%;
+    }
+    
+}
+
+
+@media screen and (max-width:650px) {
+
+    .bar {
+        display: inline-block;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .header {
+        gap: 20px;
+    }
+
+    .banner-header h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .booking-card-item {
+        width: 80%;
+        margin: 5px auto;
+        text-align: center;
+    }
+
+    .booking-card-item label {
+        font-size: 15px;
+    }
+
+    .btn {
+        padding: 14px 20px;
+        font-size: 15px;
+    }
+
+    .text-container {
+        font-size: 16px;
+        word-spacing: 5px;
+    }
+    
+    .text-container span {
+        font-size: 20px;
+    }
+
+    .rooms-container{
+        padding: 25px 4%;
+    }
+
+    .subscribe-buttons {
+        min-width: 265px;
+    }
+
+    .food-detail-container {
+        padding: 20px 8%;
+    }
+    
+    .food-detail {
+        width: 90%;
+        padding: 20px;
+        gap: 10px;
+    }
+    
+    .food-detail h1 {
+        font-size: 30px;
+    }
+
+    .premium-card {
+        margin-bottom: 15px;
+        gap: 10px;
+    }
+    
+    .premium-card h1 {
+        font-size: 20px;
+    }
+
+    .gallery {
+        padding: 20px 10%;
+        gap: 10px;
+    }
+    
+    .gallery img {
+        width: 90%;
+    }
 }
